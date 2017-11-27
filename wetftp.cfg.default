@@ -1,0 +1,51 @@
+[wetftp]
+# IP addresses to listen for incoming FTP connections.
+wetftp_addr = 0.0.0.0
+wetftp_port = 2121
+
+# IP address to send outgoing FTP connections.
+docker_addr = 172.17.0.2
+docker_port = 21
+
+# Name of this sensor, used when logging or outputing
+name = Wetftp HoneyPot 1
+
+[output]
+# Ways to report to you when wetftp visited by hackers.
+# except log, others only report wetftp log
+p0fp0f = false
+log = true
+email = false
+bearychat = false
+
+
+[bearychat]
+# Urls of bearychat incoming robots
+# Each of them should be start with url, e.g. url1 url2
+url1 = https://hook.bearychat.com/xxx
+
+
+[email]
+#user, pwd, host, port of your smtp server
+user = example@163.com
+pwd = example
+host = smtp.163.com
+port = 25
+
+# Wetland can send message to mutli emails
+# It should start with 'to', e.g. to1 to2 to3
+to1 = example@qq.com
+
+
+[log]
+# The folder to store logs 
+path = log
+
+
+[p0fp0f]
+# Path to p0f folder
+path = p0f
+# iface to sniff to sniff
+iface = eth0
+# sock name of p0f api
+sockname = wetftp

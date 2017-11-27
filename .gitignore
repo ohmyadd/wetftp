@@ -1,0 +1,7 @@
+log/
+p0f/
+
+wetftp.cfg
+
+wetftp/*.pyc
+wetftp/*/*.pyc
