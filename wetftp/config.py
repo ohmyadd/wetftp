@@ -1,4 +1,4 @@
-import ConfigParser
+import configparser
 
-cfg = ConfigParser.ConfigParser()
+cfg = configparser.ConfigParser()
 cfg.read('wetftp.cfg')

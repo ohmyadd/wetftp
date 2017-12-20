@@ -1,14 +1,21 @@
 [wetftp]
 # IP addresses to listen for incoming FTP connections.
 wetftp_addr = 0.0.0.0
-wetftp_port = 2121
+wetftp_port = 21
 
 # IP address to send outgoing FTP connections.
 docker_addr = 172.17.0.2
+#docker_addr = ftp.sjtu.edu.cn
 docker_port = 21
 
 # Name of this sensor, used when logging or outputing
 name = Wetftp HoneyPot 1
+
+[ftps]
+enable = true
+cert = data/server.crt
+key = data/server.key
+reuse = true
 
 [output]
 # Ways to report to you when wetftp visited by hackers.
@@ -22,7 +29,7 @@ bearychat = false
 [bearychat]
 # Urls of bearychat incoming robots
 # Each of them should be start with url, e.g. url1 url2
-url1 = https://hook.bearychat.com/xxx
+url1 = https://hook.bearychat.com/=xxx
 
 
 [email]

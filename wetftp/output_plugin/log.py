@@ -23,6 +23,8 @@ class plugin(object):
             os.makedirs(self.logpath)
 
     def send(self, subject, action, content):
+        if isinstance(content, bytes):
+            content = content.decode(errors='ignore')
         if action == 'cmd':
             with open(os.path.join(self.logpath, 'cmd.log'), 'a') as logfile:
                 log = ' '.join([time.strftime("%y%m%d-%H:%M:%S"), content, '\n'])
